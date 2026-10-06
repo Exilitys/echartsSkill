@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 .pytest_cache/
 .DS_Store
+.ruff_cache/
+dist/
+test-results/
+node_modules/
+*.egg-info/

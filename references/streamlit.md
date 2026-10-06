@@ -2,6 +2,10 @@
 
 ## Native API and version checks
 
+Verified baseline: **Streamlit 1.65.0**. The parameter contract below matches the
+official 1.65 documentation. These are Python wrapper arguments; keep them
+separate from a generated JSON option.
+
 The native method is `st.echarts_chart`, introduced in **Streamlit 1.64.0**.
 `st.echarts` is not the documented name. Inspect an existing project's imports
 and version before changing code:
@@ -60,10 +64,14 @@ option = {
     "dataset": {"dimensions": ["month", "revenue"], "source": records},
     "xAxis": {"type": "category"},
     "yAxis": {"type": "value", "name": "USD"},
-    "series": [{
-        "id": "revenue", "name": "Revenue", "type": "bar",
-        "encode": {"x": "month", "y": "revenue"},
-    }],
+    "series": [
+        {
+            "id": "revenue",
+            "name": "Revenue",
+            "type": "bar",
+            "encode": {"x": "month", "y": "revenue"},
+        }
+    ],
 }
 # records must have month/revenue columns; normalize nonfinite values first.
 json.dumps(option, allow_nan=False)
@@ -87,12 +95,34 @@ dimension names, including columns that become identical when converted to strin
 Native `height` is not a CSS string such as `"420px"`. `theme="dark"` and
 `use_container_width=True` are not parameters of this API. When no explicit size
 is provided, content defaults are 350px high and 700px wide; stretch width is the
-default. Set dimensions on the wrapper, not in the option.
+default. An integer width is capped by the parent container's width. A stretch
+height fills the larger of the chart's content and parent height. Set dimensions
+on the wrapper, not in the option.
+
+`theme=None` still enables accessible descriptions by default and supplies
+`series.cursor:"default"` when it is missing. Explicit option settings can
+override these defaults; the wrapper's nonempty `alt` is a separate exception
+that keeps the chart named even if `aria.enabled` was false. The Streamlit theme
+can be adjusted through `theme.chartCategoricalColors`,
+`theme.chartSequentialColors`, and font configuration in Streamlit's settings.
+Those settings belong to the app configuration, not the ECharts option.
+
+For Streamlit 1.65, prefer a short, specific `alt` when the chart's meaning is
+known. It overrides `aria.label.description`. `None` keeps ECharts' generated
+data-based name when accessibility is enabled; empty or whitespace-only strings
+behave like `None` and produce a log warning. An empty string does not mark this
+chart decorative. A short `alt` is not a substitute for a fuller text or table
+alternative to a dense chart.
 
 ECharts titles and labels do not parse Streamlit Markdown. Place formatted app
 copy in `st.markdown` around the chart. Stable series IDs and a stable `key` help
 updates across reruns; they do not guarantee every interaction survives a
 changed option. The API returns a chart element, not selection data.
+
+For 1.65, `key` also becomes a CSS class prefixed with `st-key-`. It keeps element
+identity when the spec, theme, or renderer changes; it does not make renderer
+changes reuse the same internal ECharts instance. Do not make user-facing state
+promises beyond that identity contract.
 
 ## Compatibility boundaries
 

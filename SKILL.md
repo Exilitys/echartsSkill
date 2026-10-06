@@ -1,6 +1,11 @@
 ---
 name: echarts-json
 description: Generate, adapt, validate, and repair Apache ECharts option objects as strict JSON, especially for Streamlit's native st.echarts_chart. Use for chart selection, series and coordinate setup, datasets, axes, tooltips, legends, zoom, and styling across all built-in ECharts chart families. Explain compatibility when requests require maps, custom JavaScript, or extensions.
+license: MIT
+compatibility: Instructions work in agents supporting the Agent Skills format. Optional scripts require Python 3.10+. Native chart integration targets Streamlit 1.65.0 and core ECharts 6.1; Streamlit 1.64 is supported without the alt argument.
+metadata:
+  author: Exilitys
+  version: "1.1.0"
 ---
 
 # ECharts JSON
@@ -55,12 +60,15 @@ mentions `st.echarts`, `st.echarts_chart`, or this skill without another target.
    run the bundled validator when a shell is available:
 
    ```bash
-   python scripts/validate_option.py chart.json --target streamlit
+   python "/absolute/path/to/echarts-json/scripts/validate_option.py" chart.json --target streamlit
    ```
 
-   Paths above are relative to this skill's directory. For another ECharts host,
-   use `--target echarts`; external examples still require the assets or modules
-   described in the extensions guide. Use `--echarts-major 5` for a known v5 host.
+   Resolve the script path from this skill's installed directory, keeping
+   `chart.json` relative to the user's working directory or using its absolute
+   path. Do not assume the skill is installed in the app's repository root.
+   For another ECharts host, use `--target echarts`; external examples still
+   require the assets or modules described in the extensions guide. Use
+   `--echarts-major 5` for a known v5 host.
    This is a focused linter, not a full ECharts schema or a rendering test. Review
    warnings and, when possible, render once in the actual app and check browser
    errors, legends, labels, tooltip content, zoom, and narrow-screen layout.
@@ -93,8 +101,9 @@ mentions `st.echarts`, `st.echarts_chart`, or this skill without another target.
 ## Native Streamlit compatibility
 
 The documented native method is **`st.echarts_chart`**, available since Streamlit
-1.64. The 1.65 implementation bundles core ECharts 6.1. Check the installed
-version rather than assuming a future host matches that snapshot.
+1.64. The verification baseline is **Streamlit 1.65.0** with core ECharts 6.1.
+Check the installed version rather than assuming a future host matches that
+snapshot.
 
 Native options support ordinary built-in charts, including chord, and ECharts
 controls inside the chart. Native Streamlit does **not** support:
@@ -104,6 +113,13 @@ controls inside the chart. Native Streamlit does **not** support:
 - JavaScript callbacks or arbitrary module/transform registration;
 - ECharts GL, `wordCloud`, `liquidFill`, or other separately loaded extensions;
 - the third-party component's `events` or `on_select` arguments.
+
+The default `theme="streamlit"` applies app colors, fonts, and layout. Use
+`theme=None` for an explicitly styled option; native accessibility and cursor
+defaults still apply unless the option overrides them. In 1.65+, a nonempty
+`alt` overrides `aria.label.description` and gives the chart an accessible name
+even when `aria.enabled` was false. Prefer a specific short description and
+avoid an empty `alt` string.
 
 For native route/path charts, explicitly use `lines.coordinateSystem:
 "cartesian2d"`; its ECharts default is geographic. A calendar or matrix is a
@@ -139,9 +155,12 @@ from pathlib import Path
 import streamlit as st
 
 option = json.loads(Path("chart.json").read_text(encoding="utf-8"))
-st.echarts_chart(option, height=420, key="chart")
+st.echarts_chart(option, height=420, key="chart", alt="Monthly revenue in USD")
 ```
 
-For a runnable example browser, use `streamlit run scripts/demo_app.py` after
-installing `streamlit>=1.64`. All bundled data is illustrative. The demo offers
-only native-compatible examples.
+Tailor `alt` to the actual data; the text above assumes a monthly revenue chart.
+For Streamlit 1.64, omit `alt` and set `aria.label.description` in the option.
+For a runnable example browser, resolve `scripts/demo_app.py` inside this skill's
+directory and run it with Streamlit installed. All bundled data is illustrative.
+The demo offers only native-compatible examples. Agents without shell access can
+still follow these instructions and return JSON; running a script is optional.

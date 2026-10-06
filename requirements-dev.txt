@@ -1,0 +1,5 @@
+# Validation snapshot; not required to install or use the skill instructions.
+streamlit==1.65.0
+pyecharts==2.1.0
+PyYAML==6.0.3
+ruff==0.16.10

@@ -49,5 +49,22 @@ Recheck APIs when the host version differs or an unfamiliar option is required.
 - [Liquid fill](https://github.com/ecomfe/echarts-liquidfill)
 - [Statistical transforms](https://github.com/ecomfe/echarts-stat)
 
+## Agent packaging and installation
+
+- [Agent Skills specification](https://agentskills.io/specification)
+  — portable `SKILL.md` frontmatter, resources, and progressive disclosure.
+- [Skills CLI](https://github.com/vercel-labs/skills)
+  — repository discovery, agent selection, copy installation, and update/removal.
+- [Codex skills](https://developers.openai.com/codex/skills/)
+- [Claude Code skills](https://code.claude.com/docs/en/skills)
+- [Cursor skills](https://cursor.com/docs/skills)
+- [OpenCode skills](https://opencode.ai/docs/skills/)
+- [Gemini CLI skills](https://geminicli.com/docs/cli/skills/)
+- [GitHub Copilot skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
+- [Windsurf / Devin Desktop Cascade skills](https://docs.devin.ai/desktop/cascade/skills)
+
+The [installation guide](../docs/installation.md) records the current documented
+locations. CLI target IDs and native discovery paths can differ across versions.
+
 Core ECharts support is distinct from support in the selected Streamlit host.
 Verify both the chart property and the host's ability to load its prerequisites.
