@@ -1,0 +1,70 @@
+{
+  "title": {
+    "text": "Sample revenue and cost",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 88,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "type": "bar",
+      "name": "Revenue",
+      "data": [
+        120,
+        150,
+        140,
+        180
+      ],
+      "barMaxWidth": 32,
+      "id": "grouped_bar-0"
+    },
+    {
+      "type": "bar",
+      "name": "Cost",
+      "data": [
+        80,
+        95,
+        90,
+        110
+      ],
+      "barMaxWidth": 32,
+      "id": "grouped_bar-1"
+    }
+  ],
+  "legend": {
+    "top": 30,
+    "data": [
+      "Revenue",
+      "Cost"
+    ]
+  },
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample monthly revenue and cost compared with grouped bars in USD."
+    }
+  }
+}

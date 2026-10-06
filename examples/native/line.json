@@ -1,0 +1,51 @@
+{
+  "title": {
+    "text": "Sample monthly revenue",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "name": "Revenue",
+      "type": "line",
+      "data": [
+        120,
+        150,
+        null,
+        180
+      ],
+      "connectNulls": false,
+      "id": "line-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Monthly sample revenue in USD, with a missing March observation."
+    }
+  }
+}

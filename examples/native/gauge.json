@@ -1,0 +1,41 @@
+{
+  "title": {
+    "text": "Sample completion gauge",
+    "left": 0
+  },
+  "tooltip": {
+    "formatter": "{b}: {c}%",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "gauge",
+      "min": 0,
+      "max": 100,
+      "radius": "70%",
+      "center": [
+        "50%",
+        "57%"
+      ],
+      "progress": {
+        "show": true
+      },
+      "detail": {
+        "formatter": "{value}%"
+      },
+      "data": [
+        {
+          "name": "Completion",
+          "value": 72
+        }
+      ],
+      "id": "gauge-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample completion of 72 percent points on a 0–100 gauge."
+    }
+  }
+}

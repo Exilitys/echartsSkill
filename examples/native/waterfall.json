@@ -1,0 +1,98 @@
+{
+  "title": {
+    "text": "Sample balance waterfall",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true,
+    "axisPointer": {
+      "type": "shadow"
+    }
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 88,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Stage",
+    "data": [
+      "Opening",
+      "Revenue",
+      "Cost",
+      "Closing"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "type": "bar",
+      "name": "Offset",
+      "stack": "balance",
+      "data": [
+        0,
+        100,
+        130,
+        0
+      ],
+      "silent": true,
+      "tooltip": {
+        "show": false
+      },
+      "itemStyle": {
+        "color": "transparent"
+      },
+      "id": "waterfall-0"
+    },
+    {
+      "type": "bar",
+      "name": "Increase / total",
+      "stack": "balance",
+      "data": [
+        100,
+        60,
+        null,
+        130
+      ],
+      "itemStyle": {
+        "color": "#2563EB"
+      },
+      "id": "waterfall-1"
+    },
+    {
+      "type": "bar",
+      "name": "Decrease",
+      "stack": "balance",
+      "data": [
+        null,
+        null,
+        30,
+        null
+      ],
+      "itemStyle": {
+        "color": "#D97706"
+      },
+      "id": "waterfall-2"
+    }
+  ],
+  "legend": {
+    "top": 30,
+    "data": [
+      "Increase / total",
+      "Decrease"
+    ]
+  },
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample waterfall: opening 100 USD, revenue plus 60, cost minus 30, closing 130. All cumulative balances stay nonnegative."
+    }
+  }
+}

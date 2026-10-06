@@ -1,0 +1,63 @@
+{
+  "title": {
+    "text": "Sample sales sunburst",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "sunburst",
+      "radius": [
+        0,
+        "70%"
+      ],
+      "center": [
+        "50%",
+        "56%"
+      ],
+      "sort": null,
+      "nodeClick": "rootToNode",
+      "data": [
+        {
+          "name": "Hardware",
+          "children": [
+            {
+              "name": "Laptops",
+              "value": 40
+            },
+            {
+              "name": "Phones",
+              "value": 25
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "children": [
+            {
+              "name": "Support",
+              "value": 20
+            },
+            {
+              "name": "Consulting",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "label": {
+        "rotate": "radial"
+      },
+      "id": "sunburst-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample product sales hierarchy expressed as nested radial segments."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": {
+    "text": "Sample product profiles",
+    "left": 0
+  },
+  "legend": {
+    "top": 30
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "radar": {
+    "center": [
+      "50%",
+      "58%"
+    ],
+    "radius": "58%",
+    "indicator": [
+      {
+        "name": "Speed",
+        "max": 100
+      },
+      {
+        "name": "Quality",
+        "max": 100
+      },
+      {
+        "name": "Support",
+        "max": 100
+      }
+    ]
+  },
+  "series": [
+    {
+      "type": "radar",
+      "data": [
+        {
+          "name": "Model A",
+          "value": [
+            80,
+            70,
+            90
+          ]
+        },
+        {
+          "name": "Model B",
+          "value": [
+            65,
+            85,
+            75
+          ]
+        }
+      ],
+      "areaStyle": {
+        "opacity": 0.15
+      },
+      "id": "radar-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample product profiles with speed, quality, and support scored on the same 0–100 scale."
+    }
+  }
+}

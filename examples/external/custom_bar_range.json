@@ -1,0 +1,76 @@
+{
+  "title": {
+    "text": "External custom range bars",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Category",
+    "data": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Range value"
+  },
+  "series": [
+    {
+      "name": "Range value",
+      "type": "custom",
+      "data": [
+        [
+          0,
+          20,
+          40
+        ],
+        [
+          1,
+          25,
+          55
+        ],
+        [
+          2,
+          35,
+          65
+        ]
+      ],
+      "renderItem": "barRange",
+      "encode": {
+        "x": 0,
+        "y": [
+          1,
+          2
+        ],
+        "tooltip": [
+          1,
+          2
+        ]
+      },
+      "itemPayload": {
+        "barWidth": 20,
+        "borderRadius": 3
+      },
+      "id": "custom_bar_range-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample range bars for an externally registered barRange custom renderer. Not supported by native Streamlit."
+    }
+  }
+}

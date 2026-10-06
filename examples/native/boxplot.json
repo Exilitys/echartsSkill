@@ -1,0 +1,82 @@
+{
+  "title": {
+    "text": "Sample team distributions",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Team",
+    "data": [
+      "Team A",
+      "Team B",
+      "Team C"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Score"
+  },
+  "series": [
+    {
+      "name": "Summary",
+      "type": "boxplot",
+      "data": [
+        [
+          10,
+          12,
+          15,
+          18,
+          22
+        ],
+        [
+          8,
+          11,
+          13,
+          16,
+          20
+        ],
+        [
+          12,
+          16,
+          19,
+          23,
+          28
+        ]
+      ],
+      "id": "boxplot-0"
+    },
+    {
+      "type": "scatter",
+      "name": "Outliers",
+      "data": [
+        [
+          1,
+          25
+        ],
+        [
+          2,
+          32
+        ]
+      ],
+      "symbolSize": 8,
+      "id": "boxplot-1"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Precomputed sample whiskers and quartiles for three teams, with two separate outliers."
+    }
+  }
+}

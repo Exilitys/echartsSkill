@@ -1,0 +1,42 @@
+{
+  "title": {
+    "text": "External sample word cloud",
+    "left": 0
+  },
+  "series": [
+    {
+      "type": "wordCloud",
+      "shape": "circle",
+      "top": 60,
+      "sizeRange": [
+        18,
+        50
+      ],
+      "rotationRange": [
+        0,
+        0
+      ],
+      "data": [
+        {
+          "name": "Data",
+          "value": 100
+        },
+        {
+          "name": "Charts",
+          "value": 70
+        },
+        {
+          "name": "Streamlit",
+          "value": 50
+        }
+      ],
+      "id": "wordcloud-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample weighted words in a host with echarts-wordcloud loaded."
+    }
+  }
+}

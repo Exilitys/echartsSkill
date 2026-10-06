@@ -1,0 +1,64 @@
+{
+  "title": {
+    "text": "Sample sales hierarchy",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "treemap",
+      "top": 65,
+      "bottom": 35,
+      "left": 10,
+      "right": 10,
+      "data": [
+        {
+          "name": "Hardware",
+          "children": [
+            {
+              "name": "Laptops",
+              "value": 40
+            },
+            {
+              "name": "Phones",
+              "value": 25
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "children": [
+            {
+              "name": "Support",
+              "value": 20
+            },
+            {
+              "name": "Consulting",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "upperLabel": {
+        "show": true
+      },
+      "breadcrumb": {
+        "show": true
+      },
+      "label": {
+        "show": true,
+        "formatter": "{b}"
+      },
+      "id": "treemap-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample product sales hierarchy with leaf values and parent totals derived from children."
+    }
+  }
+}

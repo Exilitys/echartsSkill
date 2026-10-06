@@ -1,0 +1,49 @@
+{
+  "title": {
+    "text": "Sample revenue by product",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "yAxis": {
+    "type": "category",
+    "data": [
+      "Product Alpha",
+      "Product Beta",
+      "Product Gamma"
+    ],
+    "inverse": true
+  },
+  "series": [
+    {
+      "name": "Revenue",
+      "type": "bar",
+      "data": [
+        180,
+        140,
+        90
+      ],
+      "barMaxWidth": 44,
+      "id": "horizontal_bar-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample product revenue ranked from top to bottom in USD."
+    }
+  }
+}

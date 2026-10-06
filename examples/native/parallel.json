@@ -1,0 +1,69 @@
+{
+  "title": {
+    "text": "Sample product metrics",
+    "left": 0
+  },
+  "tooltip": {
+    "confine": true
+  },
+  "parallel": {
+    "left": 70,
+    "right": 50,
+    "top": 75,
+    "bottom": 50
+  },
+  "parallelAxis": [
+    {
+      "dim": 0,
+      "name": "Speed",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "dim": 1,
+      "name": "Cost (USD)",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "dim": 2,
+      "name": "Quality",
+      "min": 0,
+      "max": 100
+    }
+  ],
+  "series": [
+    {
+      "type": "parallel",
+      "name": "Products",
+      "lineStyle": {
+        "width": 2,
+        "opacity": 0.6
+      },
+      "data": [
+        [
+          80,
+          40,
+          90
+        ],
+        [
+          65,
+          60,
+          85
+        ],
+        [
+          90,
+          75,
+          70
+        ]
+      ],
+      "id": "parallel-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample product rows across speed, cost in USD, and quality dimensions."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "title": {
+    "text": "Sample daily requests",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 82,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "time",
+    "name": "UTC date",
+    "axisLabel": {
+      "formatter": "{MM}-{dd}"
+    }
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Requests"
+  },
+  "series": [
+    {
+      "name": "Requests",
+      "type": "line",
+      "data": [
+        [
+          "2026-10-01T00:00:00Z",
+          120
+        ],
+        [
+          "2026-10-02T00:00:00Z",
+          180
+        ],
+        [
+          "2026-10-05T00:00:00Z",
+          150
+        ],
+        [
+          "2026-10-08T00:00:00Z",
+          210
+        ]
+      ],
+      "showSymbol": false,
+      "id": "time_line-0"
+    }
+  ],
+  "useUTC": true,
+  "dataZoom": [
+    {
+      "type": "inside",
+      "xAxisIndex": 0
+    },
+    {
+      "type": "slider",
+      "xAxisIndex": 0,
+      "bottom": 8,
+      "height": 20
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample request counts at irregular UTC dates with an x-axis zoom slider."
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": {
+    "text": "Sample category donut",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "formatter": "{b}: {c} ({d}%)",
+    "confine": true
+  },
+  "legend": {
+    "top": 30
+  },
+  "series": [
+    {
+      "type": "pie",
+      "name": "Share",
+      "radius": [
+        "38%",
+        "62%"
+      ],
+      "center": [
+        "50%",
+        "56%"
+      ],
+      "avoidLabelOverlap": true,
+      "label": {
+        "formatter": "{b}: {d}%"
+      },
+      "data": [
+        {
+          "name": "A",
+          "value": 40
+        },
+        {
+          "name": "B",
+          "value": 35
+        },
+        {
+          "name": "C",
+          "value": 25
+        }
+      ],
+      "id": "donut-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample category shares using a donut configuration of a pie series."
+    }
+  }
+}

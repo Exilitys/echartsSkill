@@ -1,0 +1,62 @@
+{
+  "title": {
+    "text": "Sample highlighted accounts",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "value",
+    "name": "Spend (USD)"
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Revenue (USD)"
+  },
+  "series": [
+    {
+      "name": "Accounts",
+      "type": "effectScatter",
+      "data": [
+        [
+          10,
+          18
+        ],
+        [
+          15,
+          25
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          25,
+          45
+        ]
+      ],
+      "symbolSize": 14,
+      "showEffectOn": "emphasis",
+      "rippleEffect": {
+        "scale": 2.5,
+        "brushType": "stroke"
+      },
+      "id": "effect_scatter-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample spend versus revenue points, with ripple emphasis on hover."
+    }
+  }
+}

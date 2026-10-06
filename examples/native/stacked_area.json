@@ -1,0 +1,76 @@
+{
+  "title": {
+    "text": "Sample revenue by channel",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 88,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "type": "line",
+      "name": "Online",
+      "stack": "revenue",
+      "areaStyle": {
+        "opacity": 0.35
+      },
+      "data": [
+        70,
+        90,
+        80,
+        110
+      ],
+      "id": "stacked_area-0"
+    },
+    {
+      "type": "line",
+      "name": "Store",
+      "stack": "revenue",
+      "areaStyle": {
+        "opacity": 0.35
+      },
+      "data": [
+        50,
+        60,
+        60,
+        70
+      ],
+      "id": "stacked_area-1"
+    }
+  ],
+  "legend": {
+    "top": 30,
+    "data": [
+      "Online",
+      "Store"
+    ]
+  },
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample online and store revenue, stacked by month in USD."
+    }
+  }
+}

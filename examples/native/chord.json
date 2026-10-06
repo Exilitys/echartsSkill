@@ -1,0 +1,70 @@
+{
+  "title": {
+    "text": "Sample group relationships",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "chord",
+      "center": [
+        "50%",
+        "56%"
+      ],
+      "radius": [
+        "52%",
+        "62%"
+      ],
+      "padAngle": 5,
+      "label": {
+        "show": true,
+        "position": "outside"
+      },
+      "lineStyle": {
+        "color": "source",
+        "opacity": 0.35
+      },
+      "emphasis": {
+        "focus": "adjacency"
+      },
+      "data": [
+        {
+          "name": "A"
+        },
+        {
+          "name": "B"
+        },
+        {
+          "name": "C"
+        }
+      ],
+      "links": [
+        {
+          "source": "A",
+          "target": "B",
+          "value": 10
+        },
+        {
+          "source": "B",
+          "target": "C",
+          "value": 7
+        },
+        {
+          "source": "C",
+          "target": "A",
+          "value": 5
+        }
+      ],
+      "id": "chord-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample weighted relationships between A, B, and C, including a cycle. Requires core ECharts 6."
+    }
+  }
+}

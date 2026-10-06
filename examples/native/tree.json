@@ -1,0 +1,61 @@
+{
+  "title": {
+    "text": "Sample organization tree",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "tree",
+      "left": "18%",
+      "right": "20%",
+      "top": 65,
+      "bottom": 30,
+      "orient": "LR",
+      "layout": "orthogonal",
+      "expandAndCollapse": true,
+      "initialTreeDepth": 2,
+      "label": {
+        "position": "left",
+        "align": "right"
+      },
+      "leaves": {
+        "label": {
+          "position": "right",
+          "align": "left"
+        }
+      },
+      "data": [
+        {
+          "name": "Organization",
+          "children": [
+            {
+              "name": "Engineering",
+              "children": [
+                {
+                  "name": "Frontend"
+                },
+                {
+                  "name": "Backend"
+                }
+              ]
+            },
+            {
+              "name": "Operations"
+            }
+          ]
+        }
+      ],
+      "id": "tree-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample organization hierarchy with engineering and operations branches."
+    }
+  }
+}

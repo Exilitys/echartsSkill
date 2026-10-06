@@ -1,0 +1,79 @@
+{
+  "title": {
+    "text": "Sample service network",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "graph",
+      "layout": "force",
+      "top": 65,
+      "bottom": 30,
+      "left": 40,
+      "right": 40,
+      "roam": true,
+      "draggable": true,
+      "symbolSize": 42,
+      "force": {
+        "repulsion": 250,
+        "edgeLength": [
+          90,
+          150
+        ]
+      },
+      "label": {
+        "show": true
+      },
+      "edgeSymbol": [
+        "none",
+        "arrow"
+      ],
+      "edgeSymbolSize": 8,
+      "lineStyle": {
+        "width": 2
+      },
+      "emphasis": {
+        "focus": "adjacency"
+      },
+      "data": [
+        {
+          "id": "api",
+          "name": "API"
+        },
+        {
+          "id": "worker",
+          "name": "Worker"
+        },
+        {
+          "id": "db",
+          "name": "Database"
+        }
+      ],
+      "links": [
+        {
+          "source": "api",
+          "target": "worker"
+        },
+        {
+          "source": "worker",
+          "target": "db"
+        },
+        {
+          "source": "api",
+          "target": "db"
+        }
+      ],
+      "id": "graph-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample directed service network with stable node IDs and force layout."
+    }
+  }
+}

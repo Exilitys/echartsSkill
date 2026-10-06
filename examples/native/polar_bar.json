@@ -1,0 +1,51 @@
+{
+  "title": {
+    "text": "Sample radial category values",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "polar": {
+    "center": [
+      "50%",
+      "56%"
+    ],
+    "radius": "65%"
+  },
+  "angleAxis": {
+    "type": "category",
+    "data": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  "radiusAxis": {
+    "type": "value",
+    "min": 0,
+    "max": 100
+  },
+  "series": [
+    {
+      "type": "bar",
+      "name": "Units",
+      "coordinateSystem": "polar",
+      "data": [
+        40,
+        60,
+        80,
+        50
+      ],
+      "id": "polar_bar-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample values for four categories with angle categories and a 0–100 radius axis."
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "title": {
+    "text": "Sample request heatmap",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "top": 65,
+    "bottom": 48,
+    "left": 16,
+    "right": 96,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "data": [
+      "Morning",
+      "Afternoon",
+      "Evening"
+    ]
+  },
+  "yAxis": {
+    "type": "category",
+    "data": [
+      "Mon",
+      "Tue"
+    ],
+    "inverse": true
+  },
+  "visualMap": {
+    "type": "continuous",
+    "min": 0,
+    "max": 10,
+    "dimension": 2,
+    "calculable": true,
+    "orient": "vertical",
+    "right": 0,
+    "top": 65,
+    "inRange": {
+      "color": [
+        "#DBEAFE",
+        "#2563EB"
+      ]
+    }
+  },
+  "series": [
+    {
+      "name": "Requests",
+      "type": "heatmap",
+      "data": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          8
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          2,
+          1,
+          7
+        ]
+      ],
+      "label": {
+        "show": true
+      },
+      "id": "heatmap-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample request counts by weekday and time period; color maps the third dimension."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": {
+    "text": "External sample liquid fill",
+    "left": 0
+  },
+  "series": [
+    {
+      "type": "liquidFill",
+      "radius": "65%",
+      "center": [
+        "50%",
+        "57%"
+      ],
+      "data": [
+        0.65,
+        0.55
+      ],
+      "label": {
+        "formatter": "65%"
+      },
+      "id": "liquid_fill-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample liquid-fill fraction of 0.65, labeled with its precomputed 65% value."
+    }
+  }
+}

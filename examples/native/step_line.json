@@ -1,0 +1,51 @@
+{
+  "title": {
+    "text": "Sample capacity changes",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Units"
+  },
+  "series": [
+    {
+      "name": "Units",
+      "type": "line",
+      "data": [
+        20,
+        20,
+        40,
+        30
+      ],
+      "step": "end",
+      "id": "step_line-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample capacity changes taking effect at the end of each interval."
+    }
+  }
+}

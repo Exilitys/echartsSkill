@@ -1,0 +1,44 @@
+{
+  "title": {
+    "text": "Synthetic region values",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "visualMap": {
+    "type": "continuous",
+    "min": 0,
+    "max": 100,
+    "left": 0,
+    "bottom": 20
+  },
+  "series": [
+    {
+      "type": "map",
+      "map": "sample-regions",
+      "roam": true,
+      "label": {
+        "show": true
+      },
+      "data": [
+        {
+          "name": "Alpha",
+          "value": 40
+        },
+        {
+          "name": "Beta",
+          "value": 75
+        }
+      ],
+      "id": "map-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Toy regional choropleth; requires external registration of the synthetic sample-regions GeoJSON."
+    }
+  }
+}

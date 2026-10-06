@@ -1,0 +1,82 @@
+{
+  "title": {
+    "text": "Sample account bubbles",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "value",
+    "name": "Spend (USD)"
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Revenue (USD)"
+  },
+  "series": [
+    {
+      "name": "Accounts",
+      "type": "scatter",
+      "data": [
+        {
+          "name": "Account A",
+          "value": [
+            10,
+            18,
+            100
+          ],
+          "symbolSize": 20
+        },
+        {
+          "name": "Account B",
+          "value": [
+            15,
+            25,
+            225
+          ],
+          "symbolSize": 30
+        },
+        {
+          "name": "Account C",
+          "value": [
+            25,
+            45,
+            400
+          ],
+          "symbolSize": 40
+        }
+      ],
+      "symbolSize": 14,
+      "dimensions": [
+        "Spend (USD)",
+        "Revenue (USD)",
+        "Orders"
+      ],
+      "encode": {
+        "x": 0,
+        "y": 1,
+        "tooltip": [
+          0,
+          1,
+          2
+        ]
+      },
+      "id": "bubble-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample account spend and revenue; bubble area is proportional to order count, with precomputed diameters."
+    }
+  }
+}

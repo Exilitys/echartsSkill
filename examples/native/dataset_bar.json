@@ -1,0 +1,93 @@
+{
+  "title": {
+    "text": "Sample dataset-backed revenue and cost",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 88,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month"
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "name": "Revenue",
+      "type": "bar",
+      "encode": {
+        "x": "month",
+        "y": "revenue",
+        "tooltip": [
+          "revenue"
+        ]
+      },
+      "id": "dataset_bar-0"
+    },
+    {
+      "name": "Cost",
+      "type": "bar",
+      "encode": {
+        "x": "month",
+        "y": "cost",
+        "tooltip": [
+          "cost"
+        ]
+      },
+      "id": "dataset_bar-1"
+    }
+  ],
+  "legend": {
+    "top": 30,
+    "data": [
+      "Revenue",
+      "Cost"
+    ]
+  },
+  "dataset": {
+    "dimensions": [
+      "month",
+      "revenue",
+      "cost"
+    ],
+    "source": [
+      {
+        "month": "Jan",
+        "revenue": 120,
+        "cost": 80
+      },
+      {
+        "month": "Feb",
+        "revenue": 150,
+        "cost": 95
+      },
+      {
+        "month": "Mar",
+        "revenue": 140,
+        "cost": 90
+      },
+      {
+        "month": "Apr",
+        "revenue": 180,
+        "cost": 110
+      }
+    ]
+  },
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample shared record dataset with named dimensions and explicit revenue/cost encode mappings."
+    }
+  }
+}

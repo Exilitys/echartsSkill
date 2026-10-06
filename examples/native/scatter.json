@@ -1,0 +1,57 @@
+{
+  "title": {
+    "text": "Sample spend and revenue",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "value",
+    "name": "Spend (USD)"
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Revenue (USD)"
+  },
+  "series": [
+    {
+      "name": "Accounts",
+      "type": "scatter",
+      "data": [
+        [
+          10,
+          18
+        ],
+        [
+          15,
+          25
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          25,
+          45
+        ]
+      ],
+      "symbolSize": 14,
+      "id": "scatter-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample account spend versus revenue, both measured in USD."
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "title": {
+    "text": "Sample revenue and conversion",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 48,
+    "top": 88,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": [
+    {
+      "type": "value",
+      "name": "Revenue (USD)"
+    },
+    {
+      "type": "value",
+      "name": "Conversion (%)",
+      "min": 0,
+      "max": 100,
+      "axisLabel": {
+        "formatter": "{value}%"
+      }
+    }
+  ],
+  "series": [
+    {
+      "name": "Revenue",
+      "type": "bar",
+      "yAxisIndex": 0,
+      "data": [
+        120,
+        150,
+        140,
+        180
+      ],
+      "id": "mixed_bar_line-0"
+    },
+    {
+      "name": "Conversion",
+      "type": "line",
+      "yAxisIndex": 1,
+      "data": [
+        20,
+        25,
+        22,
+        28
+      ],
+      "id": "mixed_bar_line-1"
+    }
+  ],
+  "legend": {
+    "top": 30,
+    "data": [
+      "Revenue",
+      "Conversion"
+    ]
+  },
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample monthly revenue and conversion with explicit USD and percent y-axes."
+    }
+  }
+}

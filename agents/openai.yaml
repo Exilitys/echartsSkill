@@ -1,0 +1,4 @@
+interface:
+  display_name: "ECharts JSON"
+  short_description: "Build ECharts JSON options for native Streamlit charts"
+  default_prompt: "Use $echarts-json to create a strict JSON ECharts option for my data, compatible with Streamlit st.echarts_chart."

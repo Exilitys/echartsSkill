@@ -1,0 +1,77 @@
+{
+  "title": {
+    "text": "Sample October activity",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "calendar": {
+    "range": "2026-10",
+    "top": 80,
+    "left": 65,
+    "right": 25,
+    "cellSize": [
+      "auto",
+      24
+    ],
+    "yearLabel": {
+      "show": false
+    },
+    "dayLabel": {
+      "firstDay": 1
+    }
+  },
+  "visualMap": {
+    "type": "continuous",
+    "min": 0,
+    "max": 10,
+    "dimension": 1,
+    "orient": "horizontal",
+    "left": "center",
+    "bottom": 15,
+    "inRange": {
+      "color": [
+        "#DBEAFE",
+        "#2563EB"
+      ]
+    }
+  },
+  "series": [
+    {
+      "type": "heatmap",
+      "name": "Activity",
+      "coordinateSystem": "calendar",
+      "data": [
+        [
+          "2026-10-01",
+          2
+        ],
+        [
+          "2026-10-02",
+          6
+        ],
+        [
+          "2026-10-03",
+          8
+        ],
+        [
+          "2026-10-04",
+          4
+        ],
+        [
+          "2026-10-05",
+          10
+        ]
+      ],
+      "id": "calendar_heatmap-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample activity on five October dates; unobserved dates are not assigned zero."
+    }
+  }
+}

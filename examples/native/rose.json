@@ -1,0 +1,54 @@
+{
+  "title": {
+    "text": "Sample rose chart",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "formatter": "{b}: {c} ({d}%)",
+    "confine": true
+  },
+  "legend": {
+    "top": 30
+  },
+  "series": [
+    {
+      "type": "pie",
+      "name": "Share",
+      "radius": [
+        "18%",
+        "62%"
+      ],
+      "center": [
+        "50%",
+        "56%"
+      ],
+      "avoidLabelOverlap": true,
+      "label": {
+        "formatter": "{b}: {d}%"
+      },
+      "data": [
+        {
+          "name": "A",
+          "value": 40
+        },
+        {
+          "name": "B",
+          "value": 35
+        },
+        {
+          "name": "C",
+          "value": 25
+        }
+      ],
+      "roseType": "radius",
+      "id": "rose-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample category magnitudes using a radius-based rose pie configuration."
+    }
+  }
+}

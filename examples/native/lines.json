@@ -1,0 +1,82 @@
+{
+  "title": {
+    "text": "Sample Cartesian routes",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "value",
+    "name": "X position",
+    "min": 0,
+    "max": 10
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Y position",
+    "min": 0,
+    "max": 10
+  },
+  "series": [
+    {
+      "type": "lines",
+      "name": "Routes",
+      "coordinateSystem": "cartesian2d",
+      "symbol": [
+        "none",
+        "arrow"
+      ],
+      "symbolSize": 8,
+      "lineStyle": {
+        "width": 2,
+        "curveness": 0.15
+      },
+      "data": [
+        {
+          "name": "Route A",
+          "coords": [
+            [
+              1,
+              2
+            ],
+            [
+              8,
+              6
+            ]
+          ],
+          "value": 10
+        },
+        {
+          "name": "Route B",
+          "coords": [
+            [
+              2,
+              8
+            ],
+            [
+              9,
+              3
+            ]
+          ],
+          "value": 7
+        }
+      ],
+      "id": "lines-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample directed routes on value axes. The Cartesian coordinate system is set explicitly."
+    }
+  }
+}

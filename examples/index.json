@@ -1,0 +1,437 @@
+{
+  "data_note": "All examples use illustrative sample data.",
+  "examples": [
+    {
+      "name": "line",
+      "file": "native/line.json",
+      "target": "native",
+      "series_types": [
+        "line"
+      ],
+      "description": "Monthly sample revenue in USD, with a missing March observation.",
+      "requires": []
+    },
+    {
+      "name": "area",
+      "file": "native/area.json",
+      "target": "native",
+      "series_types": [
+        "line"
+      ],
+      "description": "Sample monthly revenue shown as an area with a zero baseline.",
+      "requires": []
+    },
+    {
+      "name": "stacked_area",
+      "file": "native/stacked_area.json",
+      "target": "native",
+      "series_types": [
+        "line"
+      ],
+      "description": "Sample online and store revenue, stacked by month in USD.",
+      "requires": []
+    },
+    {
+      "name": "step_line",
+      "file": "native/step_line.json",
+      "target": "native",
+      "series_types": [
+        "line"
+      ],
+      "description": "Sample capacity changes taking effect at the end of each interval.",
+      "requires": []
+    },
+    {
+      "name": "time_line",
+      "file": "native/time_line.json",
+      "target": "native",
+      "series_types": [
+        "line"
+      ],
+      "description": "Sample request counts at irregular UTC dates with an x-axis zoom slider.",
+      "requires": []
+    },
+    {
+      "name": "bar",
+      "file": "native/bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample monthly revenue compared with vertical bars in USD.",
+      "requires": []
+    },
+    {
+      "name": "horizontal_bar",
+      "file": "native/horizontal_bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample product revenue ranked from top to bottom in USD.",
+      "requires": []
+    },
+    {
+      "name": "grouped_bar",
+      "file": "native/grouped_bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample monthly revenue and cost compared with grouped bars in USD.",
+      "requires": []
+    },
+    {
+      "name": "stacked_bar",
+      "file": "native/stacked_bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample online and store revenue stacked into monthly totals in USD.",
+      "requires": []
+    },
+    {
+      "name": "histogram",
+      "file": "native/histogram.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Precomputed sample duration-bin counts. The last bin includes its right edge.",
+      "requires": []
+    },
+    {
+      "name": "waterfall",
+      "file": "native/waterfall.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample waterfall: opening 100 USD, revenue plus 60, cost minus 30, closing 130. All cumulative balances stay nonnegative.",
+      "requires": []
+    },
+    {
+      "name": "pie",
+      "file": "native/pie.json",
+      "target": "native",
+      "series_types": [
+        "pie"
+      ],
+      "description": "Sample nonnegative parts of a whole: A 40, B 35, C 25.",
+      "requires": []
+    },
+    {
+      "name": "donut",
+      "file": "native/donut.json",
+      "target": "native",
+      "series_types": [
+        "pie"
+      ],
+      "description": "Sample category shares using a donut configuration of a pie series.",
+      "requires": []
+    },
+    {
+      "name": "rose",
+      "file": "native/rose.json",
+      "target": "native",
+      "series_types": [
+        "pie"
+      ],
+      "description": "Sample category magnitudes using a radius-based rose pie configuration.",
+      "requires": []
+    },
+    {
+      "name": "scatter",
+      "file": "native/scatter.json",
+      "target": "native",
+      "series_types": [
+        "scatter"
+      ],
+      "description": "Sample account spend versus revenue, both measured in USD.",
+      "requires": []
+    },
+    {
+      "name": "bubble",
+      "file": "native/bubble.json",
+      "target": "native",
+      "series_types": [
+        "scatter"
+      ],
+      "description": "Sample account spend and revenue; bubble area is proportional to order count, with precomputed diameters.",
+      "requires": []
+    },
+    {
+      "name": "effect_scatter",
+      "file": "native/effect_scatter.json",
+      "target": "native",
+      "series_types": [
+        "effectScatter"
+      ],
+      "description": "Sample spend versus revenue points, with ripple emphasis on hover.",
+      "requires": []
+    },
+    {
+      "name": "radar",
+      "file": "native/radar.json",
+      "target": "native",
+      "series_types": [
+        "radar"
+      ],
+      "description": "Sample product profiles with speed, quality, and support scored on the same 0–100 scale.",
+      "requires": []
+    },
+    {
+      "name": "tree",
+      "file": "native/tree.json",
+      "target": "native",
+      "series_types": [
+        "tree"
+      ],
+      "description": "Sample organization hierarchy with engineering and operations branches.",
+      "requires": []
+    },
+    {
+      "name": "treemap",
+      "file": "native/treemap.json",
+      "target": "native",
+      "series_types": [
+        "treemap"
+      ],
+      "description": "Sample product sales hierarchy with leaf values and parent totals derived from children.",
+      "requires": []
+    },
+    {
+      "name": "sunburst",
+      "file": "native/sunburst.json",
+      "target": "native",
+      "series_types": [
+        "sunburst"
+      ],
+      "description": "Sample product sales hierarchy expressed as nested radial segments.",
+      "requires": []
+    },
+    {
+      "name": "boxplot",
+      "file": "native/boxplot.json",
+      "target": "native",
+      "series_types": [
+        "boxplot",
+        "scatter"
+      ],
+      "description": "Precomputed sample whiskers and quartiles for three teams, with two separate outliers.",
+      "requires": []
+    },
+    {
+      "name": "candlestick",
+      "file": "native/candlestick.json",
+      "target": "native",
+      "series_types": [
+        "candlestick"
+      ],
+      "description": "Sample prices in USD using open, close, low, high order and equal trading-session spacing.",
+      "requires": []
+    },
+    {
+      "name": "heatmap",
+      "file": "native/heatmap.json",
+      "target": "native",
+      "series_types": [
+        "heatmap"
+      ],
+      "description": "Sample request counts by weekday and time period; color maps the third dimension.",
+      "requires": []
+    },
+    {
+      "name": "calendar_heatmap",
+      "file": "native/calendar_heatmap.json",
+      "target": "native",
+      "series_types": [
+        "heatmap"
+      ],
+      "description": "Sample activity on five October dates; unobserved dates are not assigned zero.",
+      "requires": []
+    },
+    {
+      "name": "parallel",
+      "file": "native/parallel.json",
+      "target": "native",
+      "series_types": [
+        "parallel"
+      ],
+      "description": "Sample product rows across speed, cost in USD, and quality dimensions.",
+      "requires": []
+    },
+    {
+      "name": "lines",
+      "file": "native/lines.json",
+      "target": "native",
+      "series_types": [
+        "lines"
+      ],
+      "description": "Sample directed routes on value axes. The Cartesian coordinate system is set explicitly.",
+      "requires": []
+    },
+    {
+      "name": "graph",
+      "file": "native/graph.json",
+      "target": "native",
+      "series_types": [
+        "graph"
+      ],
+      "description": "Sample directed service network with stable node IDs and force layout.",
+      "requires": []
+    },
+    {
+      "name": "sankey",
+      "file": "native/sankey.json",
+      "target": "native",
+      "series_types": [
+        "sankey"
+      ],
+      "description": "Sample acyclic energy flows: supply 100 units split into industry 60, homes 30, and losses 10.",
+      "requires": []
+    },
+    {
+      "name": "funnel",
+      "file": "native/funnel.json",
+      "target": "native",
+      "series_types": [
+        "funnel"
+      ],
+      "description": "Sample conversion-stage counts in process order, with a 0–1000 count domain.",
+      "requires": []
+    },
+    {
+      "name": "gauge",
+      "file": "native/gauge.json",
+      "target": "native",
+      "series_types": [
+        "gauge"
+      ],
+      "description": "Sample completion of 72 percent points on a 0–100 gauge.",
+      "requires": []
+    },
+    {
+      "name": "pictorial_bar",
+      "file": "native/pictorial_bar.json",
+      "target": "native",
+      "series_types": [
+        "pictorialBar"
+      ],
+      "description": "Sample category magnitudes rendered with repeated clipped rectangles on a 0–100 scale.",
+      "requires": []
+    },
+    {
+      "name": "theme_river",
+      "file": "native/theme_river.json",
+      "target": "native",
+      "series_types": [
+        "themeRiver"
+      ],
+      "description": "Sample online and store values at matching dates using a floating streamgraph baseline.",
+      "requires": []
+    },
+    {
+      "name": "chord",
+      "file": "native/chord.json",
+      "target": "native",
+      "series_types": [
+        "chord"
+      ],
+      "description": "Sample weighted relationships between A, B, and C, including a cycle. Requires core ECharts 6.",
+      "requires": []
+    },
+    {
+      "name": "mixed_bar_line",
+      "file": "native/mixed_bar_line.json",
+      "target": "native",
+      "series_types": [
+        "bar",
+        "line"
+      ],
+      "description": "Sample monthly revenue and conversion with explicit USD and percent y-axes.",
+      "requires": []
+    },
+    {
+      "name": "dataset_bar",
+      "file": "native/dataset_bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample shared record dataset with named dimensions and explicit revenue/cost encode mappings.",
+      "requires": []
+    },
+    {
+      "name": "polar_bar",
+      "file": "native/polar_bar.json",
+      "target": "native",
+      "series_types": [
+        "bar"
+      ],
+      "description": "Sample values for four categories with angle categories and a 0–100 radius axis.",
+      "requires": []
+    },
+    {
+      "name": "map",
+      "file": "external/map.json",
+      "target": "external",
+      "series_types": [
+        "map"
+      ],
+      "description": "Toy regional choropleth; requires external registration of the synthetic sample-regions GeoJSON.",
+      "requires": [
+        "Register examples/assets/sample-regions.geojson as sample-regions before setting the option."
+      ]
+    },
+    {
+      "name": "custom_bar_range",
+      "file": "external/custom_bar_range.json",
+      "target": "external",
+      "series_types": [
+        "custom"
+      ],
+      "description": "Sample range bars for an externally registered barRange custom renderer. Not supported by native Streamlit.",
+      "requires": [
+        "ECharts 6 plus @echarts-x/custom-bar-range, with its barRange renderer registered."
+      ]
+    },
+    {
+      "name": "bar3d",
+      "file": "external/bar3d.json",
+      "target": "external",
+      "series_types": [
+        "bar3D"
+      ],
+      "description": "Sample category/category/value bars in a prepared ECharts GL host.",
+      "requires": [
+        "ECharts GL loaded and compatible with the exact ECharts version."
+      ]
+    },
+    {
+      "name": "wordcloud",
+      "file": "external/wordcloud.json",
+      "target": "external",
+      "series_types": [
+        "wordCloud"
+      ],
+      "description": "Sample weighted words in a host with echarts-wordcloud loaded.",
+      "requires": [
+        "echarts-wordcloud registered in the runtime; check version compatibility."
+      ]
+    },
+    {
+      "name": "liquid_fill",
+      "file": "external/liquid_fill.json",
+      "target": "external",
+      "series_types": [
+        "liquidFill"
+      ],
+      "description": "Sample liquid-fill fraction of 0.65, labeled with its precomputed 65% value.",
+      "requires": [
+        "echarts-liquidfill registered in the runtime; check version compatibility."
+      ]
+    }
+  ]
+}

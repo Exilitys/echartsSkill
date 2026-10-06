@@ -1,0 +1,68 @@
+{
+  "title": {
+    "text": "External 3D sample values",
+    "left": 0
+  },
+  "tooltip": {},
+  "grid3D": {
+    "boxWidth": 100,
+    "boxDepth": 100,
+    "viewControl": {
+      "projection": "orthographic"
+    }
+  },
+  "xAxis3D": {
+    "type": "category",
+    "data": [
+      "A",
+      "B"
+    ]
+  },
+  "yAxis3D": {
+    "type": "category",
+    "data": [
+      "North",
+      "South"
+    ]
+  },
+  "zAxis3D": {
+    "type": "value",
+    "name": "Units"
+  },
+  "series": [
+    {
+      "type": "bar3D",
+      "coordinateSystem": "cartesian3D",
+      "data": [
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          8
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          7
+        ]
+      ],
+      "shading": "color",
+      "id": "bar3d-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample category/category/value bars in a prepared ECharts GL host."
+    }
+  }
+}

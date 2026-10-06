@@ -1,0 +1,54 @@
+{
+  "title": {
+    "text": "Sample revenue area",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Month",
+    "data": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "USD"
+  },
+  "series": [
+    {
+      "name": "Revenue",
+      "type": "line",
+      "data": [
+        120,
+        150,
+        140,
+        180
+      ],
+      "connectNulls": false,
+      "areaStyle": {
+        "opacity": 0.25
+      },
+      "id": "area-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample monthly revenue shown as an area with a zero baseline."
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "title": {
+    "text": "Sample energy flows",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "item",
+    "confine": true
+  },
+  "series": [
+    {
+      "type": "sankey",
+      "top": 70,
+      "bottom": 40,
+      "left": 25,
+      "right": 100,
+      "nodeWidth": 18,
+      "nodeGap": 24,
+      "nodeAlign": "justify",
+      "emphasis": {
+        "focus": "adjacency"
+      },
+      "lineStyle": {
+        "color": "source",
+        "opacity": 0.35
+      },
+      "data": [
+        {
+          "name": "Supply"
+        },
+        {
+          "name": "Industry"
+        },
+        {
+          "name": "Homes"
+        },
+        {
+          "name": "Losses"
+        }
+      ],
+      "links": [
+        {
+          "source": "Supply",
+          "target": "Industry",
+          "value": 60
+        },
+        {
+          "source": "Supply",
+          "target": "Homes",
+          "value": 30
+        },
+        {
+          "source": "Supply",
+          "target": "Losses",
+          "value": 10
+        }
+      ],
+      "id": "sankey-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Sample acyclic energy flows: supply 100 units split into industry 60, homes 30, and losses 10."
+    }
+  }
+}

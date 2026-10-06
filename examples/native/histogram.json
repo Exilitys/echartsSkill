@@ -1,0 +1,52 @@
+{
+  "title": {
+    "text": "Sample duration histogram",
+    "left": 0
+  },
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true
+  },
+  "grid": {
+    "left": 16,
+    "right": 24,
+    "top": 60,
+    "bottom": 48,
+    "containLabel": true
+  },
+  "xAxis": {
+    "type": "category",
+    "name": "Duration (s)",
+    "data": [
+      "[0,10)",
+      "[10,20)",
+      "[20,30)",
+      "[30,40]"
+    ]
+  },
+  "yAxis": {
+    "type": "value",
+    "name": "Count"
+  },
+  "series": [
+    {
+      "name": "Observations",
+      "type": "bar",
+      "data": [
+        4,
+        8,
+        6,
+        2
+      ],
+      "barCategoryGap": "0%",
+      "barGap": "0%",
+      "id": "histogram-0"
+    }
+  ],
+  "aria": {
+    "enabled": true,
+    "label": {
+      "description": "Precomputed sample duration-bin counts. The last bin includes its right edge."
+    }
+  }
+}
