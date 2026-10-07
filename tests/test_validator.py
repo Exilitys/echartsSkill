@@ -1,6 +1,6 @@
 """Regression checks for malformed chart contracts and valid option overrides.
 
-Run from the skill folder: python -m unittest discover -s tests -t .
+Run from the repository root: python -m unittest discover -s tests -t .
 """
 
 import json
@@ -10,9 +10,11 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.validate_option import CORE_TYPES, load_option, validate_option
+from validate_option import CORE_TYPES, load_option, validate_option
 
-ROOT = Path(__file__).resolve().parent.parent
+from tests import SKILL_ROOT
+
+ROOT = SKILL_ROOT
 
 
 def example(name, folder="native"):

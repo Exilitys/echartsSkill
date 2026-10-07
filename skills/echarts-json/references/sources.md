@@ -63,7 +63,7 @@ Recheck APIs when the host version differs or an unfamiliar option is required.
 - [GitHub Copilot skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
 - [Windsurf / Devin Desktop Cascade skills](https://docs.devin.ai/desktop/cascade/skills)
 
-The [installation guide](../docs/installation.md) records the current documented
+The [installation guide](https://github.com/Exilitys/echartsSkill/blob/main/docs/installation.md) records the current documented
 locations. CLI target IDs and native discovery paths can differ across versions.
 
 Core ECharts support is distinct from support in the selected Streamlit host.

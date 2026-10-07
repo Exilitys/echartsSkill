@@ -1,4 +1,4 @@
-"""Build a portable skill ZIP with only the repository's public resources."""
+"""Build a portable ZIP containing only skills/echarts-json and its resources."""
 
 from __future__ import annotations
 
@@ -8,21 +8,9 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 SKILL_NAME = "echarts-json"
 ROOT = Path(__file__).resolve().parent.parent
-ROOT_FILES = (
-    "SKILL.md",
-    "README.md",
-    "LICENSE",
-    "CHANGELOG.md",
-    "CONTRIBUTING.md",
-    "VALIDATION.md",
-    "pyproject.toml",
-    "requirements-dev.txt",
-    "requirements-browser.txt",
-    ".editorconfig",
-    ".gitattributes",
-    ".gitignore",
-)
-RESOURCE_DIRECTORIES = ("agents", "references", "examples", "scripts", "docs", "tests")
+SKILL_ROOT = ROOT / "skills" / SKILL_NAME
+ROOT_FILES = ("SKILL.md", "LICENSE")
+RESOURCE_DIRECTORIES = ("agents", "references", "examples", "scripts")
 EXCLUDED_DIRECTORIES = {"__pycache__", ".pytest_cache", ".ruff_cache", "node_modules"}
 RESOURCE_SUFFIXES = {".md", ".py", ".json", ".geojson", ".yaml", ".yml"}
 
@@ -69,7 +57,7 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=ROOT / "dist" / f"{SKILL_NAME}.zip")
     arguments = parser.parse_args()
     try:
-        names = build_package(ROOT, arguments.output)
+        names = build_package(SKILL_ROOT, arguments.output)
     except (OSError, ValueError) as error:
         parser.exit(1, f"Packaging failed: {error}\n")
     print(f"Packaged {len(names)} files into {arguments.output}")

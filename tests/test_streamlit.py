@@ -6,9 +6,10 @@ import importlib.util
 import inspect
 import json
 import unittest
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+from tests import SKILL_ROOT
+
+ROOT = SKILL_ROOT
 HAS_STREAMLIT = importlib.util.find_spec("streamlit") is not None
 if HAS_STREAMLIT:
     import streamlit as st

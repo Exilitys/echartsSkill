@@ -12,6 +12,10 @@ chart selection, data shaping, required components, formatting, compatibility,
 and validation. It follows the [Agent Skills format](https://agentskills.io/specification),
 so the same instructions and resources can be installed in different coding agents.
 
+The complete installable skill is in **[skills/echarts-json/](skills/echarts-json)**.
+Copy that folder as a unit. Repository documentation, tests, validation reports,
+CI, and packaging tools live outside it.
+
 ## What is included
 
 - Setup guidance for all **23 core ECharts series types**, with native Streamlit
@@ -61,21 +65,28 @@ manual installation, global locations, updating, and removal, see
 
 ### Using Git or a downloaded ZIP
 
-No Node.js is needed for a direct Git installation. For Codex, run:
+No Node.js is needed to clone the repository and copy the skill. For a new Codex
+installation, run from your application project:
 
 ```bash
-git clone https://github.com/Exilitys/echartsSkill.git .agents/skills/echarts-json
+git clone https://github.com/Exilitys/echartsSkill.git echartsSkill
+mkdir -p .agents/skills
+cp -R echartsSkill/skills/echarts-json .agents/skills/
 ```
 
 For other agents, change the destination to their skill directory. For example,
 Claude Code uses `.claude/skills/echarts-json` and Cursor supports
 `.cursor/skills/echarts-json`.
 
-You can also download the repository ZIP from **Code → Download ZIP**, rename the
-extracted folder to **`echarts-json`**, and place it in your agent's skills
-directory. Keep the entire folder together; copying only `SKILL.md` loses the
+You can also download the repository ZIP from **Code → Download ZIP**, extract it,
+and copy **`skills/echarts-json`** into your agent's skills directory. Keep that
+entire folder together; copying only `SKILL.md` loses the
 references and examples. Restart or reload skills if your agent does not discover
 the new skill immediately.
+
+If you installed an earlier version by cloning the whole repository directly
+into the agent's skill directory, reinstall using the CLI or copy the new skill
+folder. See [migration guidance](docs/installation.md#updating-older-installations).
 
 Installing the skill requires no Python packages, API keys, or MCP server.
 Python is optional for validation; Streamlit is needed only to render the charts
@@ -165,23 +176,28 @@ description and keeps the chart named. Labels inside an option use ECharts text
 formatting; put Streamlit Markdown outside the chart.
 
 The older `streamlit-echarts` component is a separate integration with its own
-API. See [Streamlit integration](references/streamlit.md) for the distinction.
+API. See [Streamlit integration](skills/echarts-json/references/streamlit.md) for the distinction.
 
 ## Browse examples and validate an option
 
-From this repository or the installed skill folder:
+From the repository root:
 
 ```bash
-python scripts/validate_option.py chart.json --target streamlit
-python scripts/validate_option.py examples/native --target streamlit
-python scripts/validate_option.py examples/external --target echarts
-python -m streamlit run scripts/demo_app.py
+python skills/echarts-json/scripts/validate_option.py chart.json --target streamlit
+python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/native --target streamlit
+python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/external --target echarts
+python -m streamlit run skills/echarts-json/scripts/demo_app.py
 ```
 
 The validator uses only the Python 3.10+ standard library. It checks selected data
 contracts and compatibility; it is not a complete ECharts schema or a rendering
 test. External-target success does not load a map or extension. See the
-[chart catalog](references/chart-catalog.md) and [example index](examples/index.json).
+[chart catalog](skills/echarts-json/references/chart-catalog.md) and
+[example index](skills/echarts-json/examples/index.json).
+
+Inside an installed `echarts-json` folder, use `scripts/validate_option.py`,
+`examples/native`, and `scripts/demo_app.py` directly; the repository's `skills/`
+prefix is not part of the installed skill.
 
 If you run validation from an application folder, use the validator's absolute
 path and keep `chart.json` relative to the application folder.
@@ -189,15 +205,18 @@ path and keep `chart.json` relative to the application folder.
 ## Repository layout
 
 ```text
-SKILL.md                  Agent instructions and portable metadata
-agents/openai.yaml        Optional Codex display and invocation metadata
-references/               Chart contracts and integration guides
-examples/native/          Native Streamlit JSON options
-examples/external/        Options requiring another prepared host
-examples/assets/          Synthetic geographic example data
-scripts/                  Validator, example browser, and ZIP builder
-docs/                     Installation and compatibility audit
-tests/                    Validator, package, and Streamlit integration checks
+skills/echarts-json/        Complete installable skill
+  SKILL.md                 Agent instructions and portable metadata
+  LICENSE                  License included in copies and ZIPs
+  agents/openai.yaml       Optional Codex metadata
+  references/              Chart contracts and integration guides
+  examples/                Native/external JSON options and sample assets
+  scripts/                 Option validator and example browser
+scripts/package_skill.py   ZIP builder for the skill folder only
+docs/                      Repository installation and compatibility guides
+tests/                     Repository, validator, and integration checks
+.github/workflows/         Continuous validation
+VALIDATION.md              Verification results
 ```
 
 The skill uses progressive disclosure: an agent reads the catalog and only the
@@ -216,5 +235,5 @@ or request examples through [GitHub issues](https://github.com/Exilitys/echartsS
 contains synthetic regions. Apache ECharts, Streamlit, and other referenced
 projects keep their own licenses.
 
-See [sources](references/sources.md) for authoritative API documentation. This is
+See [sources](skills/echarts-json/references/sources.md) for authoritative API documentation. This is
 an independent skill repository and is not an official Streamlit or Apache project.

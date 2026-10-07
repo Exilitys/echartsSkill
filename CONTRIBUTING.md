@@ -2,7 +2,9 @@
 
 Keep this repository a portable Agent Skill. The instructions should work without
 an agent-specific plugin, and the optional Python validator should remain usable
-without third-party dependencies. Keep optional Codex metadata in `agents/`.
+without third-party dependencies. Keep all installable resources in `skills/echarts-json/`, including optional
+Codex metadata in its `agents/` directory. Tests, reports, CI, and packaging tools
+belong outside that directory.
 
 ## Development setup
 
@@ -28,8 +30,8 @@ not required to install the skill or run its JSON validator.
 python -m ruff check .
 python -m ruff format --check .
 python -m unittest discover -s tests -t .
-python scripts/validate_option.py examples/native --target streamlit
-python scripts/validate_option.py examples/external --target echarts
+python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/native --target streamlit
+python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/external --target echarts
 python scripts/package_skill.py --output dist/echarts-json.zip
 ```
 
@@ -60,8 +62,9 @@ errors, not just whether the server started. It does not render external charts.
 ## Adding or updating examples
 
 1. Select the correct core series and coordinate/data contract from the catalog.
-2. Add a complete strict JSON option to `examples/native/` or `examples/external/`.
-3. Add an entry to `examples/index.json`; identify any external prerequisites.
+2. Add a complete strict JSON option to `skills/echarts-json/examples/native/` or
+   `skills/echarts-json/examples/external/`.
+3. Add an entry to `skills/echarts-json/examples/index.json`; identify any external prerequisites.
 4. Include stable series IDs, informative labels/units, and an accessible
    description. Use small illustrative data without JavaScript callbacks.
 5. Link the example from the relevant guide and catalog, then run the checks.
@@ -73,10 +76,11 @@ the checks actually performed.
 
 ## Versioning and packaging
 
-The skill version lives in `SKILL.md` under `metadata.version`. Describe material
+The skill version lives in `skills/echarts-json/SKILL.md` under `metadata.version`. Describe material
 changes in `CHANGELOG.md`. `scripts/package_skill.py` creates a ZIP with an
-`echarts-json/` top-level directory and excludes `.git`, environments, caches,
-dependency directories, and generated output.
+`echarts-json/` top-level directory containing only the installable skill. It
+excludes repository tests, reports, development files, `.git`, environments,
+caches, dependency directories, and generated output.
 
 Before a push, check `git diff --check`. Do not commit virtual environments,
 browser downloads, `dist/`, installer lock files from temporary tests, or test

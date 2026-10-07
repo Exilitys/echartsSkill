@@ -22,6 +22,7 @@ from urllib.request import urlopen
 from playwright.sync_api import expect, sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
+SKILL_ROOT = ROOT / "skills" / "echarts-json"
 
 
 @contextmanager
@@ -90,8 +91,8 @@ def serve_demo():
         app.write_text(
             "import json, runpy, sys\n"
             "import streamlit as st\n"
-            f"sys.path.insert(0, {str(ROOT / 'scripts')!r})\n"
-            f"state = runpy.run_path({str(ROOT / 'scripts/demo_app.py')!r})\n"
+            f"sys.path.insert(0, {str(SKILL_ROOT / 'scripts')!r})\n"
+            f"state = runpy.run_path({str(SKILL_ROOT / 'scripts/demo_app.py')!r})\n"
             "st.text('Browser state: ' + json.dumps([state['selected'], "
             "state['renderer'], state['themed']]))\n",
             encoding="utf-8",
@@ -170,7 +171,7 @@ def main() -> int:
     args = parser.parse_args()
     entries = [
         entry
-        for entry in json.loads((ROOT / "examples/index.json").read_text())["examples"]
+        for entry in json.loads((SKILL_ROOT / "examples/index.json").read_text())["examples"]
         if entry["target"] == "native"
     ]
     started = time.monotonic()

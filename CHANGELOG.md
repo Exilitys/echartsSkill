@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 — 2026-10-07
+
+- Moved all installable resources into `skills/echarts-json/`; repository tests,
+  validation reports, development configuration, and packaging tools stay outside.
+- Changed ZIP packaging to include only the skill folder and its license.
+- Updated discovery, manual installation, links, test imports, and CI paths.
+- Kept the skills CLI installation command unchanged and added migration guidance
+  for installations that cloned the whole repository into an agent skill directory.
+
 ## 1.1.0 — 2026-10-06
 
 - Rechecked the native integration against Streamlit 1.65 documentation and

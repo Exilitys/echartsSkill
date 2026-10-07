@@ -24,8 +24,8 @@ jobs:
       - run: python -m ruff check .
       - run: python -m ruff format --check .
       - run: python -m unittest discover -s tests -t . -v
-      - run: python scripts/validate_option.py examples/native --target streamlit
-      - run: python scripts/validate_option.py examples/external --target echarts
+      - run: python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/native --target streamlit
+      - run: python skills/echarts-json/scripts/validate_option.py skills/echarts-json/examples/external --target echarts
       - run: python scripts/package_skill.py --output dist/echarts-json.zip
 
   browser:

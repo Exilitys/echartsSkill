@@ -5,7 +5,7 @@ license: MIT
 compatibility: Instructions work in agents supporting the Agent Skills format. Optional scripts require Python 3.10+. Native chart integration targets Streamlit 1.65.0 and core ECharts 6.1; Streamlit 1.64 is supported without the alt argument.
 metadata:
   author: Exilitys
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # ECharts JSON
